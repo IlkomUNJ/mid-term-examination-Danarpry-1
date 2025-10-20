@@ -1,35 +1,28 @@
 #ifndef CUSTOMMATRIX_H
 #define CUSTOMMATRIX_H
-
-#include <iostream>
-
-using namespace std;
+#include <QDebug>
 
 class CustomMatrix{
 public:
     bool mat[3][3]={0};
-    CustomMatrix(){
 
-    }
+    CustomMatrix(){}
 
-    //alternate way to instantiate the class
-    CustomMatrix(bool m[3][3]){
-        const int m_size = sizeof(m) / sizeof(m[0]);
-        for (int i=0;i< m_size;i++) {
-            for(int j=0; j < sizeof(m[0]);j++){
-                //cout << i << " " << j << endl;
+    void fillMatrix(bool m[3][3]){
+        for (int i = 0; i < 3; i++) {
+            for(int j = 0; j < 3; j++){
                 mat[i][j] = m[i][j];
             }
         }
     }
 
-    void fillMatrix(bool m[3][3]){
-        const int m_size = sizeof(m) / sizeof(m[0]);
-        for (int i=0;i< m_size;i++) {
-            for(int j=0; j < sizeof(m[0]);j++){
-                //cout << i << " " << j << endl;
-                mat[i][j] = m[i][j];
+    void printMatrix() const {
+        for (int i = 0; i < 3; ++i) {
+            QString row;
+            for (int j = 0; j < 3; ++j) {
+                row += (mat[i][j] ? "1" : "0");
             }
+            qDebug() << row;
         }
     }
 };

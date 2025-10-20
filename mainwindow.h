@@ -14,7 +14,6 @@ public:
     ~MainWindow();
 
 private slots:
-    // Slot to handle the button click event
 
 private:
     DrawingCanvas *m_canvas;
