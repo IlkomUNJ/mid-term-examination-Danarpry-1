@@ -3,3 +3,6 @@ Repository for final lesson before mid term of computer graphic course
 Name    : Danar Priyo Utomo
 NIM     : 1313623022
 Class   : Computer Science A 2023
+
+Gemini      : https://gemini.google.com/share/c70eb51f2dcb
+Perplexity  : Internal Error
